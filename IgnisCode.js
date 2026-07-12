@@ -75,14 +75,7 @@ function playGame() {
     // Read the user's choice: "odd" or "even"
     var betType = document.getElementById("betType").value;
 
-    // New: make sure the user actually picked odd or even before we roll dice.
-    // If betType is not "odd" AND not "even", we show a message and stop.
-    if (betType !== "odd" && betType !== "even") {
-        result.innerHTML = "Ignis tilts his head: please choose odd or even first.";
-        return;
-    }
-
-    // Read the bet amount as text
+     // Read the bet amount as text
     var betText = document.getElementById("betAmount").value;
 
     // Turn the bet text into a number
