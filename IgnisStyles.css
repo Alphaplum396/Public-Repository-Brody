@@ -1,0 +1,30 @@
+body{
+    background-color: darkred;   /* Ignis red background */
+    color: gold;                 /* gold font color */
+}
+
+/* Center main heading */
+h1{
+    text-align: center;
+}
+
+/* Center the game box on the page */
+/* Center the game box and make it look like a card */
+#gameBox{
+    width: 400px;
+    margin: 20px auto;         /* center and add space from top */
+    padding: 15px;
+    background-color: #660000; /* a darker red than body so it stands out */
+    border: 2px solid gold;    /* gold border like a fancy card */
+}
+#chibiImage{
+    width: 150px;                /* shrink to fit the box */
+    display: block;              /* so margin auto works */
+    margin: 0 auto 10px auto;    /* center and add space below */
+}
+
+/* Make result text stand out */
+#resultArea{
+    font-weight: bold;
+    margin-top: 20px;
+}

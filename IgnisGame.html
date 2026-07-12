@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- We are writing an HTML5 page -->
+<html lang="en">
+<!-- Start of the page, language is English -->
+
+<head>
+    <!-- Head holds page info, not what you see -->
+    <meta charset="UTF-8">
+    <!-- Use standard text encoding -->
+    <title>Ignis Odds or Evens</title>
+    <!-- Text in the browser tab -->
+     <!-- This will link my special CSS file to this page. It will style the page with colors, fonts, and layout. -->
+    <link rel="stylesheet" href="IgnisStyles.css">
+    <script src="IgnisCode.js" defer></script>
+    <!-- Link to our JavaScript file. "defer" waits until HTML is loaded.
+         This matches our window.onload and lets JS safely find elements. -->
+</head>
+
+<body>
+    <!-- Everything here is visible on the page -->
+<div id="gameBox">
+
+    <!-- Ignis image at the top of the game box -->
+    <img id="chibiImage" src="chibi-ignis-coins.png">
+
+    <h1>Ignis' Odds or Evens</h1>
+    <!-- Main title -->
+
+    <p>
+        <!-- Short game rules -->
+        Choose odd or even. Enter your bet in crowns. Ignis will roll two dice.
+    </p>
+
+    <!-- Form for user input. We MUST use a form with submit. -->
+    <!-- id="ignisGame" is used in JavaScript with document.getElementById("ignisGame") -->
+    <form id="ignisGame">
+        <!-- Drop-down for odd/even -->
+        <!-- for="betType" connects this label to the select with id="betType" -->
+        <label for="betType">Odd or Even:</label>
+        <!-- id="betType" is used in JavaScript to read the player's choice -->
+        <select id="betType" name="betType">
+            <option value="odd">Odd</option>
+            <!-- Bet on odd total. Value "odd" is what JS sees and compares. -->
+            <option value="even">Even</option>
+            <!-- Bet on even total. Value "even" is what JS sees and compares. -->
+        </select>
+
+        <br><br>
+
+        <!-- Number input for bet amount -->
+        <!-- for="betAmount" connects label to the input with id="betAmount" -->
+        <label for="betAmount">Bet (1 - 100 crowns):</label>
+        <!-- id="betAmount" is used in JavaScript to read the bet as text/number -->
+        <input type="number" id="betAmount" name="betAmount" min="1" max="100">
+        <!-- Number field. min and max set allowed range in the browser UI -->
+
+        <br><br>
+
+        <!-- Submit button to play the game -->
+        <!-- When clicked, this triggers the form's onsubmit in our JavaScript -->
+        <input type="submit" value="Play with Ignis">
+    </form>
+
+    <!-- Area where we show the result text from JavaScript -->
+    <!-- id="resultArea" is used in JS with innerHTML to show messages -->
+    <p id="resultArea"></p>
+
+    <!-- Button to reset the game to starting crowns -->
+    <!-- id="resetButton" is used in JS to hook up the resetGame() click handler -->
+    <button id="resetButton">Reset Game</button>
+
+</body>
+
+</html>
