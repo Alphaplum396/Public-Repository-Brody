@@ -11,9 +11,9 @@
 </head>
 
 <!-- The body section holds the text and images we want to show to the user-->
-<body>
+
     <!-- This section will have a logo, menu or page title -->
-    <body style="background-color: plum;">
+    <body>
     <header>
         <h1> You've found my CSC 102 Homepage, Welcome!</h1>
         <!-- create a nav section to hold the menu -->
@@ -22,12 +22,19 @@
             <br>
             <a href="Boards.html">Boards</a>
          </nav>
-    </header>
-
+    </header> 
 <!-- p is the paragraph tag and has spacing by default -->
  <p> 
-    <!-- img is the image tag and src is the source for the image -->
+    <!-- This is the meme image that will move across the screen -->
         <img id="memeImage" src="memeImage.webp">
+<!-- this is a line break-->
+    <br><br>
+
+<!-- button is a clickable button. onclick runs the JavaScript function when clicked -->
+    <!-- The start button will call the startMeme function when clicked -->
+<button id="startButton" onclick="startMeme();">Start</button>
+<!-- The stop button will call the stopMeme function when clicked. -->
+<button id="stopButton" onclick="stopMeme();" disabled>Stop</button>
 </p>
 <footer>
     Brody Wittenburg
@@ -39,5 +46,7 @@
     Tempe, Arizona 85283
     <br>
 </footer>
+<!-- This script tag links to our JavaScript file. It will run the code in that file. -->
+<script src="Index.js"></script>
 </body>
 </html>

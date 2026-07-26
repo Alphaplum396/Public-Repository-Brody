@@ -20,14 +20,18 @@ nav{
     line-height: 30px;
 }
 
+#memeImage{
+    width: 400px;
+    position: absolute;
+    left: 0px;
+    top: 200px;
+}
+
 footer{
     text-align: center;
     margin-right: 200px;
-}
-
-#memeImage{
-    margin-right: 200px;
-    width: 400px;
+    margin-top: 700px;
+    clear: both;
 }
 
 h1{
