@@ -1,39 +1,51 @@
-/* 
-declaration block:
-
-selector{
-    property: value;
-    property2: value;
-}
-*/
-
+/* set the main colors for the page */
 body{
     background-color: plum;
     color: palegoldenrod;
+    font-family: Arial, sans-serif;
 }
 
+/* put the nav on the left side */
 nav{
-    height: 600px;
+    height: 200px;
     width: 200px;
     float: left;
     padding: 5px;
     line-height: 30px;
 }
 
+/* this controls the meme image size and lets it move left/right */
 #memeImage{
     width: 400px;
-    position: absolute;
+    position: relative;
     left: 0px;
-    top: 200px;
+    top: 0px;
 }
 
+/* move the main content to the right of the nav */
+p{
+    margin-left: 220px;
+    margin-top: 40px;
+}
+
+/* style all the buttons so they line up and are easy to see */
+button{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: rgb(95, 14, 170);
+    color: rgb(4, 250, 197);
+}
+
+/* center the footer at the bottom */
 footer{
     text-align: center;
-    margin-right: 200px;
-    margin-top: 700px;
     clear: both;
+    margin-top: 80px;
 }
 
+/* center the main heading */
 h1{
     text-align: center;
 }

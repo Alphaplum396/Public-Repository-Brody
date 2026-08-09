@@ -81,3 +81,18 @@ function stopMeme() {
     document.getElementById("startButton").disabled = false;
 
 }
+
+// Sound
+
+// Make a sound object for the water drops file
+var sound = new Audio("water-drops-daniel_simon.mp3");
+
+// This plays the sound
+function playSound() {
+    sound.play();
+}
+
+// This pauses the sound
+function pauseSound() {
+    sound.pause();
+}

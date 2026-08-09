@@ -1,52 +1,64 @@
-<!-- Brody Wittenburg, 7/11/26 -->
-<!--This is Supposed to be the first tag, and it tells the Broswer it's a HTML5 page  -->
+<!-- Brody Wittenburg, 7/11/26 - 8/10/26 -->
+<!-- This tells the browser this is an HTML5 page -->
 <!DOCTYPE html>
 <!-- The HTML tag goes next -->
- <html>
- <!-- The head section has info for the browser and search engine -->
-<head>
-<title> Brody's CSC 102 Homepage</title>
-    <!--add a link to our css file!-->
+<html>
+  <!-- The head section has info for the browser and search engine -->
+  <head>
+    <!-- This is the page title -->
+    <title>Brody's CSC 102 Homepage</title>
+    <!-- Link to the css file -->
     <link rel="stylesheet" href="Main.css">
-</head>
+  </head>
 
-<!-- The body section holds the text and images we want to show to the user-->
-
-    <!-- This section will have a logo, menu or page title -->
-    <body>
+  <!-- The body section holds what the user sees -->
+  <body>
+    <!-- This section has the page title and menu -->
     <header>
-        <h1> You've found my CSC 102 Homepage, Welcome!</h1>
-        <!-- create a nav section to hold the menu -->
-         <nav>
-            <a href="Index.html">Home</a>
-            <br>
-            <a href="Boards.html">Boards</a>
-         </nav>
-    </header> 
-<!-- p is the paragraph tag and has spacing by default -->
- <p> 
-    <!-- This is the meme image that will move across the screen -->
-        <img id="memeImage" src="memeImage.webp">
-<!-- this is a line break-->
-    <br><br>
+      <!-- Main heading -->
+      <h1>You've found my CSC 102 Homepage, Welcome!</h1>
+      <!-- Navigation links -->
+      <nav>
+        <a href="Index.html">Home</a>
+        <br>
+        <a href="Boards.html">Boards</a>
+      </nav>
+    </header>
 
-<!-- button is a clickable button. onclick runs the JavaScript function when clicked -->
-    <!-- The start button will call the startMeme function when clicked -->
-<button id="startButton" onclick="startMeme();">Start</button>
-<!-- The stop button will call the stopMeme function when clicked. -->
-<button id="stopButton" onclick="stopMeme();" disabled>Stop</button>
-</p>
-<footer>
-    Brody Wittenburg
-    <br>
-    University of Advancing Technology
-    <br>
-     2625 West Baseline Road
-    <br> 
-    Tempe, Arizona 85283
-    <br>
-</footer>
-<!-- This script tag links to our JavaScript file. It will run the code in that file. -->
-<script src="Index.js"></script>
-</body>
+    <!-- p is a paragraph block with spacing -->
+    <p>
+      <!-- Meme image that will move across the screen -->
+      <img id="memeImage" src="memeImage.webp" alt="Meme image">
+
+      <!-- line breaks to add space -->
+      <br><br>
+
+      <!-- Start button calls the startMeme function -->
+      <button id="startButton" onclick="startMeme();">Start</button>
+      <!-- Stop button calls the stopMeme function -->
+      <button id="stopButton" onclick="stopMeme();" disabled>Stop</button>
+
+      <!-- Sound buttons -->
+      <!-- Play button calls playSound -->
+      <button id="playSoundButton" onclick="playSound();">Play Sound</button>
+      <!-- Pause button calls pauseSound -->
+      <button id="pauseSoundButton" onclick="pauseSound();">Pause Sound</button>
+      
+    </p>
+
+    <!-- Footer with name and school info -->
+    <footer>
+      Brody Wittenburg
+      <br>
+      University of Advancing Technology
+      <br>
+      2625 West Baseline Road
+      <br>
+      Tempe, Arizona 85283
+      <br>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="Index.js"></script>
+  </body>
 </html>
