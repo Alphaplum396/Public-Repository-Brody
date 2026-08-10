@@ -2,79 +2,60 @@
 var palForm = document.getElementById("palForm");
 // Get the message box
 var msg = document.getElementById("msg");
-// Get the text input
+// Get the text input for last checked value
 var textInput = document.getElementById("textInput");
-
-// Control if we keep looping
-var keepGoing = true;
+// Get the text input where the user types
+var userText = document.getElementById("userText");
 
 // Run when the form is submitted
 palForm.onsubmit = function () {
 
-    // Loop while user wants to keep going
-    while (keepGoing) {
+    // Get what the user typed in the box
+    var raw = userText.value;
 
-        // Ask the user for text
-        var raw = prompt("Enter a word or phrase to check:");
+    // Remove spaces at start and end
+    var trimmed = raw.trim();
 
-        // If user clicked Cancel
-        if (raw === null) {
-            // Show message
-            msg.innerHTML = "Prompt canceled. Click the button to try again.";
-            // Stop this run
-            break;
+    // Clear old message
+    msg.innerHTML = "";
+
+    // If nothing was typed
+    if (trimmed === "") {
+        // Show error
+        msg.innerHTML = "You must enter some text.";
+        // Stop this run
+        return false;
+    }
+
+    // Show what they entered in the box
+    textInput.value = raw;
+
+    // Make lowercase and remove spaces inside
+    var clean = "";
+    // Build string one character at a time 
+    for (var i = 0; i < trimmed.length; i++) {
+        var ch = trimmed[i].toLowerCase();
+        if (ch !== " ") {
+            clean = clean + ch;
         }
+    }
 
-        // Remove spaces at start and end
-        var trimmed = raw.trim();
+    // Start reversed string
+    var rev = "";
 
-        // If nothing was typed
-        if (trimmed === "") {
-            // Show error
-            msg.innerHTML = "You must enter some text.";
-            // Stop this run
-            break;
-        }
+    // Build reversed string
+    for (var j = clean.length - 1; j >= 0; j--) {
+        // Add characters from end to start
+        rev = rev + clean[j];
+    }
 
-        // Show what they entered in the box
-        textInput.value = raw;
-
-        // Make lowercase and remove spaces inside
-        var clean = trimmed.toLowerCase().replace(/\s+/g, "");
-
-        // Start reversed string
-        var rev = "";
-
-        // Build reversed string
-        for (var i = clean.length - 1; i >= 0; i--) {
-            // Add characters from end to start
-            rev += clean[i];
-        }
-
-        // Check if it is a palindrome
-        if (clean === rev) {
-            // Show palindrome message
-            msg.innerHTML = "\"" + raw + "\" is a palindrome!";
-        } else {
-            // Show not palindrome message
-            msg.innerHTML = "\"" + raw + "\" is NOT a palindrome.";
-        }
-
-        // Ask if they want another
-        var again = confirm("Do you want to enter another word or phrase?");
-
-        // If they do not want another
-        if (!again) {
-            // Turn off loop
-            keepGoing = false;
-            // Disable the button
-            palForm.elements[1].disabled = true;
-            // Add final note
-            msg.innerHTML += " You chose to stop. Refresh the page to start again.";
-        }
-
-        // End this loop run
-        break;
+    // Check if it is a palindrome
+    if (clean === rev) {
+        // Show palindrome message
+        msg.innerHTML = "\"" + raw + "\" is a palindrome!";
+    } else {
+        // Show not palindrome message
+        msg.innerHTML = "\"" + raw + "\" is NOT a palindrome.";
     }
 
     // Stop real form submit / page reload

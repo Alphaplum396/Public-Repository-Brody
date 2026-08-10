@@ -54,3 +54,10 @@ input[type="submit"] {
     padding: 8px;
     border-radius: 4px;
 }
+/* Grish image at the top of the box */
+.grish-img {
+    display: block;
+    margin: 0 auto 12px auto;  /* center and add space under */
+    max-width: 100%;           /* doesn't overflow the container */
+    border-radius: 6px;        /* little rounded corners */
+}
