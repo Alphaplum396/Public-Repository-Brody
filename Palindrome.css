@@ -61,3 +61,26 @@ input[type="submit"] {
     max-width: 100%;           /* doesn't overflow the container */
     border-radius: 6px;        /* little rounded corners */
 }
+
+
+/* Navigation styles */
+nav {
+  background-color: #330000;  /* dark strip behind buttons (optional) */
+  padding: 10px;
+}
+
+/* gold buttons with dark purple text */
+nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 8px;
+  background-color: gold;       /* button color */
+  color: #2b0033;               /* dark purple text */
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ffd700;    /* slightly brighter gold on hover */
+}

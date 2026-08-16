@@ -26,7 +26,7 @@ table {
 /* Style all table header cells (<th>) and data cells (<td>) */
 th,
 td {
-  border: 1px solid black;      /* Simple black border around each cell */
+  border: 1px solid black;      /*  Black border around each cell */
   padding: 8px;                 /* Space between cell content and cell border */
   text-align: left;             /* Align text to the left inside each cell */
 }
@@ -39,4 +39,26 @@ thead {
 /* Style the code example blocks inside <pre> tags */
 .example-code {
   background-color: white;      /* White background behind the code text */
+}
+
+/* Navigation styles */
+nav {
+  background-color: #330000;  /* dark strip behind buttons (optional) */
+  padding: 10px;
+}
+
+/* gold buttons with dark purple text */
+nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 8px;
+  background-color: gold;       /* button color */
+  color: #2b0033;               /* dark purple text */
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ffd700;    /* slightly brighter gold on hover */
 }

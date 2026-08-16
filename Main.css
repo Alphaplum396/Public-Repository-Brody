@@ -3,15 +3,30 @@ body{
     background-color: plum;
     color: palegoldenrod;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-/* put the nav on the left side */
-nav{
-    height: 200px;
-    width: 200px;
-    float: left;
-    padding: 5px;
-    line-height: 30px;
+/* navigation styles */
+nav {
+  background-color: #330000;   /* dark strip behind buttons */
+  padding: 10px;
+  text-align: center;          /* center buttons */
+}
+
+/* gold buttons with dark purple text */
+nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 8px;
+  background-color: gold;
+  color: #2b0033;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ffd700;
 }
 
 /* this controls the meme image size and lets it move left/right */
@@ -22,10 +37,10 @@ nav{
     top: 0px;
 }
 
-/* move the main content to the right of the nav */
+/* move the main content – adjust if needed */
 p{
-    margin-left: 220px;
-    margin-top: 40px;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 /* style all the buttons so they line up and are easy to see */
