@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en">
+<!-- Root element of the page; lang="en" means the page content is in English -->
+
+<head>
+  <!-- The <head> contains metadata, the title, and links to CSS files -->
+
+  <meta charset="UTF-8">
+  <!-- Sets the character encoding so text (including symbols) displays correctly -->
+
+  <title>JavaScript Table Reference</title>
+  <!-- Text that appears in the browser tab for this page -->
+
+  <!-- Link to the external CSS file named "table.css" in the same folder -->
+  <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+  <!-- The <body> contains all the content that is shown on the page -->
+
+  <h1>JavaScript Concepts Table Reference</h1>
+  <!-- Main heading at the top of the page -->
+
+  <p class="description">
+    <!-- Description of what this page shows -->
+    This table summarizes key JavaScript concepts, shows a small example,
+    and includes a short lesson explaining how each one works.
+  </p>
+
+  <table>
+    <!-- The <table> element holds all the tabular data -->
+
+    <thead>
+      <!-- Header row with column titles -->
+      <tr>
+        <th>Concept</th>
+        <th>When / Why You Use It</th>
+        <th>Example &amp; Lesson</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Row 1: if / else -->
+      <tr>
+        <td class="concept">if / else</td>
+        <td>
+          Make decisions in your code based on a condition.
+        </td>
+        <td>
+          <!-- Code example -->
+          <pre class="example-code">const age = 20;
+
+if (age >= 18) {
+  console.log("Adult");
+} else {
+  console.log("Minor");
+}</pre>
+
+          <!-- Lesson text for this example -->
+          <p>
+            <strong>Lesson:</strong><br>
+            <code>const age = 20;</code> creates a constant variable named <code>age</code> with the value <code>20</code>.<br>
+            The line <code>if (age &gt;= 18) {</code> checks the condition “is <code>age</code> at least 18?”.<br>
+            If the condition is <em>true</em>, the code inside the first curly braces runs and prints <code>"Adult"</code>.<br>
+            If the condition is <em>false</em>, the <code>else</code> block runs instead and prints <code>"Minor"</code>.<br>
+            Use <code>if / else</code> whenever your program needs to choose between two paths.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Row 2: for loop -->
+      <tr>
+        <td class="concept">for loop</td>
+        <td>
+          Repeat something a set number of times or loop through a list.
+        </td>
+        <td>
+          <!-- Code example -->
+          <pre class="example-code">for (let i = 0; i &lt; 5; i++) {
+  console.log(i);
+}</pre>
+
+          <!-- Lesson text for this example -->
+          <p>
+            <strong>Lesson:</strong><br>
+            The <code>for</code> loop has three parts inside the parentheses:<br>
+            <code>let i = 0;</code> sets the starting value of <code>i</code> to 0 (runs once at the beginning).<br>
+            <code>i &lt; 5;</code> is the condition; the loop runs while this is true.<br>
+            <code>i++;</code> increases <code>i</code> by 1 after each loop.<br>
+            Inside the braces, <code>console.log(i);</code> prints the current value of <code>i</code>.<br>
+            This loop prints <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, and <code>4</code>, then stops when <code>i</code> becomes 5.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Row 3: Strings -->
+      <tr>
+        <td class="concept">Strings</td>
+        <td>
+          Work with text: trim spaces, change case, split or join.
+        </td>
+        <td>
+          <!-- Code example -->
+          <pre class="example-code">let name = "  Name  ";
+name = name.trim();
+const upper = name.toUpperCase();</pre>
+
+          <!-- Lesson text for this example -->
+          <p>
+            <strong>Lesson:</strong><br>
+            A string is text like <code>"  Name  "</code> (spaces before and after).<br>
+            <code>name = name.trim();</code> removes spaces at the start and end, so it becomes <code>"Name"</code>.<br>
+            <code>const upper = name.toUpperCase();</code> creates a new string where all letters are uppercase, <code>"NAME"</code>.<br>
+            Use string methods like <code>.trim()</code> and <code>.toUpperCase()</code> to clean and transform text.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Row 4: Functions -->
+      <tr>
+        <td class="concept">Functions</td>
+        <td>
+          Reuse logic. Name a block of code and call it later.
+        </td>
+        <td>
+          <!-- Code example -->
+          <pre class="example-code">function greet(name) {
+  console.log("Hi " + name);
+}
+
+greet("Name");</pre>
+
+          <!-- Lesson text for this example -->
+          <p>
+            <strong>Lesson:</strong><br>
+            <code>function greet(name) { ... }</code> defines a function named <code>greet</code> that takes one parameter: <code>name</code>.<br>
+            Inside the function, <code>console.log("Hi " + name);</code> prints a greeting using that <code>name</code>.<br>
+            <code>greet("Name");</code> calls the function and passes the string <code>"Name"</code> as the argument.<br>
+            Functions let you write code once and use it many times by calling the function with different values.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Row 5: Classes & Objects -->
+      <tr>
+        <td class="concept">Classes &amp; Objects</td>
+        <td>
+          Model “things” with properties and methods.
+        </td>
+        <td>
+          <!-- Code example -->
+          <pre class="example-code">class Player {
+  constructor(name, level) {
+    this.name = name;
+    this.level = level;
+  }
+}
+
+const p = new Player("Name", 5);</pre>
+
+          <!-- Lesson text for this example -->
+          <p>
+            <strong>Lesson:</strong><br>
+            <code>class Player { ... }</code> defines a blueprint for a <code>Player</code>.<br>
+            The <code>constructor(name, level)</code> runs when you create a new player and sets up <code>this.name</code> and <code>this.level</code>.<br>
+            <code>this.name = name;</code> stores the passed-in <code>name</code> on the new object.<br>
+            <code>const p = new Player("Name", 5);</code> creates a new player object with name <code>"Name"</code> and level <code>5</code>.<br>
+            Classes and objects help you group related data and behavior together in your code.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

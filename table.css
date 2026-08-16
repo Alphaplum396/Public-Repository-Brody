@@ -1,0 +1,42 @@
+
+/* Style the whole page */
+body {
+  background-color: lightgray;  /* Light gray background color for the page */
+  margin: 0;                    /* Remove the browser's default outer margin */
+  padding: 20px;                /* Add space between the page edge and content */
+}
+
+/* Style the main heading at the top of the page */
+h1 {
+  text-align: center;           /* Center the heading text horizontally */
+  margin-bottom: 20px;          /* Add space below the heading */
+}
+
+/* Style the description paragraph under the heading */
+.description {
+  margin-bottom: 20px;          /* Add space below the paragraph */
+}
+
+/* Style the table as a whole */
+table {
+  width: 100%;                  /* Make the table take up the full width of the page (inside padding) */
+  border-collapse: collapse;    /* Merge cell borders so they look like single lines */
+}
+
+/* Style all table header cells (<th>) and data cells (<td>) */
+th,
+td {
+  border: 1px solid black;      /* Simple black border around each cell */
+  padding: 8px;                 /* Space between cell content and cell border */
+  text-align: left;             /* Align text to the left inside each cell */
+}
+
+/* Style just the header row section */
+thead {
+  background-color: #dddddd;    /* Light gray background for the header row */
+}
+
+/* Style the code example blocks inside <pre> tags */
+.example-code {
+  background-color: white;      /* White background behind the code text */
+}
